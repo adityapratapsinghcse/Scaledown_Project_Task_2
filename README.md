@@ -8,18 +8,42 @@ This repository contains **Task 2 of the Scaledown Project**, developed as part 
 
 ---
 
-## 📌 What is Scaledown?
+# 🎯 RAG Candidate Screening System
 
-Scaledown is a platform providing APIs and tools to **optimize, analyze, and scale applications efficiently**.  
-This repository demonstrates a practical application of these APIs in a structured software solution.
+A robust Resume-Augmented Generation (RAG) pipeline built with **Streamlit** and **ScaleDown API** for automatically compressing resumes and matching them with job descriptions using semantic embeddings.
 
 ---
 
-## 🧠 Key Features
+## **Features**
 
-- ✅ Project developed under the **Intel Unnati Program**
-- ✅ Integration of **Scaledown APIs**
-- ✅ Demonstrates API usage and execution flow
-- ✅ Serves as a learning resource for API integration
+1. **Resume Ingestion**
+   - Upload plain text resumes (`.txt` files)
+   - Supports fallback if compression fails
 
+2. **Resume Compression**
+   - Uses ScaleDown API to summarize resumes into a dense technical profile
+   - Fallback to original resume if compression fails
+
+3. **Semantic Matching**
+   - Calculates similarity score between job description and resume using `SentenceTransformer` embeddings (`all-MiniLM-L6-v2`)
+
+4. **Stepwise Streamlit Workflow**
+   - Step 1: Resume upload
+   - Step 2: Compression and optimization metrics
+   - Step 3: Paste job description
+   - Step 4: Similarity score and evaluation metrics
+
+5. **Robust & User-Friendly**
+   - Metrics: compression ratio, latency
+   - Prevents the “AI stuck in loop” issue
+   - Fully works even if ScaleDown API returns empty text
+
+---
+
+## **Installation**
+
+1. Clone the repository:
+
+```bash
+https://github.com/adityapratapsinghcse/Scaledown_Project_Task_2.git
 ---
